@@ -1,0 +1,14 @@
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\bin\Debug\net8.0\Proyecto de catedra.exe
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\bin\Debug\net8.0\Proyecto de catedra.deps.json
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\bin\Debug\net8.0\Proyecto de catedra.runtimeconfig.json
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\bin\Debug\net8.0\Proyecto de catedra.dll
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\bin\Debug\net8.0\Proyecto de catedra.pdb
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\Proyecto de catedra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\Proyecto de catedra.AssemblyInfoInputs.cache
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\Proyecto de catedra.AssemblyInfo.cs
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\Proyecto de catedra.csproj.CoreCompileInputs.cache
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\Proyecto de catedra.dll
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\refint\Proyecto de catedra.dll
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\Proyecto de catedra.pdb
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\Proyecto de catedra.genruntimeconfig.cache
+C:\Users\lisan\Documents\Proyecto de catedra\Proyecto de catedra\Proyecto de catedra\obj\Debug\net8.0\ref\Proyecto de catedra.dll
