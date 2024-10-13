@@ -11,12 +11,54 @@ namespace ProyectoCatedra
 {
     class program
     {
+        static StreamReader Leer;
+        static StreamWriter Escribir;
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.White;
             Console.Clear();
             Console.Title = "Proyecto de Catedra";
+            Console.WriteLine("\n");
+            Console.Write("\tProyecto de catedra Programacion teoria");
+            Console.WriteLine("\n");
+            string a;
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("\t=========================================");
+                Console.WriteLine("\t    MENÚ PRINCIPAL");
+                Console.WriteLine("\t    A. INGRESAR COMO USUARIO");
+                Console.WriteLine("\t    B. INGRESAR COMO CLIENTE");
+                Console.WriteLine("\t    C. SALIR");
+                Console.WriteLine("\t=========================================");
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("\n");
+                Console.Write("\tIngrese la letra correspondiente a la opción que quiere seleccionar ");
+                a = Console.ReadLine().ToLower();
+                switch(a)
+                {
+                    case "a":
+                        
+                        Usuario();
+                        break;
+                    case "b":
+                        break;
+                    case "c":
+                        break;
+                    default:
+                        break;
+                }
+                    
+            } while (a != "c");
+
+            
+
+        }
+
+        static void Usuario()
+        {
+            Console.Clear();
             Console.WriteLine("\n");
             Console.Write("\tProyecto de catedra Programacion teoria");
             Console.WriteLine("\n");
@@ -37,7 +79,7 @@ namespace ProyectoCatedra
                 switch (opcion)
                 {
                     case "a":
-                        R_Cliente();
+                        R_Cliente_Usuario();
                         break;
                     case "b":
                         R_Vuelos();
@@ -61,10 +103,8 @@ namespace ProyectoCatedra
 
                 }
             } while (opcion != "c");
-
         }
-
-        static void R_Cliente()
+        static void R_Cliente_Usuario()
         {
             string opcion2;
 
@@ -84,6 +124,7 @@ namespace ProyectoCatedra
                 switch (opcion2)
                 {
                     case "1":
+                        Escribir = new StreamWriter ("Clientes.txt",true);
                         string V2 = "1";
                         Console.Write("\tIngrese los nombres del cliente: ");
                         string Nombre = Console.ReadLine();
@@ -116,23 +157,8 @@ namespace ProyectoCatedra
                             Console.WriteLine("\t\nCLIENTE AGREGADO EXITOSAMENTE.");
                             Console.ForegroundColor = ConsoleColor.Black;
                             Console.WriteLine("\n");
-                            //Crear archivos y ingresar datos al archivo
-                            using (var fileStream = new FileStream("DatosCliente.txt", FileMode.Append))
-                            {
-                                using (var streamWriter = new StreamWriter(fileStream))
-                                {
-                                    streamWriter.WriteLine(V2);
-                                    streamWriter.WriteLine(Nombre);
-                                    streamWriter.WriteLine(Apellido);
-                                    streamWriter.WriteLine(Correo);
-                                    streamWriter.WriteLine(Pasaporte);
-                                    streamWriter.WriteLine(edad);
-                                    streamWriter.WriteLine(Usuario);
-                                    streamWriter.WriteLine(Contraseña);
-                                    streamWriter.WriteLine();
-                                }
-                            }
-
+                            Escribir.WriteLine(Nombre+" "+Apellido+" "+Correo+" "+edad+" " +Pasaporte+" "+Usuario+" "+Contraseña);
+                            Escribir.Close();
                         }
                         else
                         {
@@ -146,6 +172,7 @@ namespace ProyectoCatedra
 
                         break;
                     case "2":
+                        Escribir = new StreamWriter("usuario.txt", true);
                         string VU = "2";
                         Console.Write("\tIngrese los nombres del usuario: ");
                         string Nombre1 = Console.ReadLine();
@@ -178,23 +205,8 @@ namespace ProyectoCatedra
                             Console.WriteLine("\tUSUARIO AGREGADO EXITOSAMENTE.");
                             Console.ForegroundColor = ConsoleColor.Black;
                             Console.WriteLine("\n");
-                            //Crear archivos y ingresar datos al archivo
-                            using (var fileStream = new FileStream("DatosUsuario.txt", FileMode.Append))
-                            {
-                                using (var streamWriter = new StreamWriter(fileStream))
-                                {
-                                    streamWriter.WriteLine(VU);
-                                    streamWriter.WriteLine(Nombre1);
-                                    streamWriter.WriteLine(Apellido1);
-                                    streamWriter.WriteLine(Correo1);
-                                    streamWriter.WriteLine(Pasaporte1);
-                                    streamWriter.WriteLine(edad1);
-                                    streamWriter.WriteLine(Usuario1);
-                                    streamWriter.WriteLine(Contraseña1);
-                                    streamWriter.WriteLine();
-                                }
-                            }
-
+                            Escribir.WriteLine(Nombre1 + " " + Apellido1 + " " + Correo1 + " " + edad1 + " " + Pasaporte1 + " " + Usuario1 + " " + Contraseña1);
+                            Escribir.Close();
                         }
                         else
                         {
@@ -245,6 +257,7 @@ namespace ProyectoCatedra
                 switch (vuelosOP)
                 {
                     case "1":
+                        Escribir = new StreamWriter("vuelo_ida_vuelta.txt", true);
                         string V2 = "1";
                         string origen, destino, fecha_ida, fecha_vuelta, capacidad;
                         Console.WriteLine("\tBienvenido a los vuelos tipo ida y vuelta");
@@ -261,22 +274,12 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\tVUELO AGREGADO EXITOSAMENTE.");
                         Console.ForegroundColor = ConsoleColor.Black;
-                        using (var fileStream = new FileStream("DatosVueloIdaVuelta.txt", FileMode.Append))
-                        {
-                            using (var streamWriter = new StreamWriter(fileStream))
-                            {
-                                streamWriter.WriteLine(V2);
-                                streamWriter.WriteLine(origen);
-                                streamWriter.WriteLine(destino);
-                                streamWriter.WriteLine(fecha_ida);
-                                streamWriter.WriteLine(fecha_vuelta);
-                                streamWriter.WriteLine(capacidad);
-                                streamWriter.WriteLine();
-                            }
-                        }
+                        Escribir.WriteLine(origen+" "+destino+" "+fecha_ida+" "+fecha_vuelta+" "+capacidad);
+                        Escribir.Close();
 
                         break;
                     case "2":
+                        Escribir = new StreamWriter("vuelos_ida.txt", true);
                         string VU = "2";
                         string origen1, destino1, fecha_ida1, capacidad1;
                         Console.WriteLine("\tBienvenido a los vuelos tipo ida");
@@ -292,18 +295,8 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\tVUELO AGREGADO EXITOSAMENTE.");
                         Console.ForegroundColor = ConsoleColor.Black;
-                        using (var fileStream = new FileStream("DatosVueloIda.txt", FileMode.Append))
-                        {
-                            using (var streamWriter = new StreamWriter(fileStream))
-                            {
-                                streamWriter.WriteLine(VU);
-                                streamWriter.WriteLine(origen1);
-                                streamWriter.WriteLine(destino1);
-                                streamWriter.WriteLine(fecha_ida1);
-                                streamWriter.WriteLine(capacidad1);
-                                streamWriter.WriteLine();
-                            }
-                        }
+                        Escribir.WriteLine(origen1 + " " + destino1 + " " + fecha_ida1 + " "+ capacidad1);
+                        Escribir.Close();
                         break;
                     case "3":
                         Console.WriteLine("\n");

@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\",
+  "WorkspaceRootPath": "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{27817B8C-0975-423F-896E-13B8C9086F96}|Proyecto de catedra\\Proyecto de catedra.csproj|c:\\users\\lisan\\documents\\proyecto de catedra\\proyecto de catedra\\proyecto de catedra\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{27817B8C-0975-423F-896E-13B8C9086F96}|Proyecto de catedra\\Proyecto de catedra.csproj|c:\\users\\lisan\\documents\\github\\proyecto-de-catedra\\proyecto de catedra\\proyecto de catedra\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{27817B8C-0975-423F-896E-13B8C9086F96}|Proyecto de catedra\\Proyecto de catedra.csproj|solutionrelative:proyecto de catedra\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\Proyecto de catedra\\Program.cs",
               "RelativeDocumentMoniker": "Proyecto de catedra\\Program.cs",
-              "ToolTip": "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra\\Program.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\Proyecto de catedra\\Program.cs",
               "RelativeToolTip": "Proyecto de catedra\\Program.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAADwv3sAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T03:37:32.509Z",
               "EditorCaption": ""

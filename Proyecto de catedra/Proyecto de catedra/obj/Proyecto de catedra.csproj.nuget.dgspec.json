@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj": {}
+    "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj": {
+    "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj",
+        "projectUniqueName": "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj",
         "projectName": "Proyecto de catedra",
-        "projectPath": "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj",
+        "projectPath": "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra.csproj",
         "packagesPath": "C:\\Users\\lisan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lisan\\Documents\\Proyecto de catedra\\Proyecto de catedra\\Proyecto de catedra\\obj\\",
+        "outputPath": "C:\\Users\\lisan\\Documents\\GitHub\\Proyecto-de-catedra\\Proyecto de catedra\\Proyecto de catedra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lisan\\AppData\\Roaming\\NuGet\\NuGet.Config",
