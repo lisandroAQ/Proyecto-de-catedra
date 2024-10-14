@@ -39,14 +39,137 @@ namespace ProyectoCatedra
                 switch(a)
                 {
                     case "a":
-                        
-                        Usuario();
+
+                            Leer = File.OpenText("usuario.txt");
+                            String cadena, usu, cadena2, con;
+                            bool encontrado = false, encontrado2 = false;
+                            String[] campos = new String[7], campos2 = new String[7];
+                            char[] separador = { ',' };
+
+                            Console.WriteLine("\n");
+                            Console.Write("\tINGRESE USUARIO ");
+                            usu = Console.ReadLine();
+                            cadena = Console.ReadLine();
+
+                        while (cadena != null && encontrado == false)
+                        {
+                            campos = cadena.Split(separador);
+                            if (campos[0].Trim().Equals(usu))
+                            {
+                                Console.WriteLine("\n");
+                                Console.Write("\tINGRESE CONTRASEÑA ");
+                                con = Console.ReadLine();
+                                cadena2 = Console.ReadLine();
+                                while (cadena2 != null && encontrado == false)
+                                {
+                                    campos2 = cadena2.Split(separador);
+                                    if (campos[1].Trim().Equals(con))
+                                    {
+                                        Usuario();
+                                        encontrado = true;
+                                       
+                                    }
+                                    else
+                                    {
+                                        cadena = Leer.ReadLine();
+                                    }
+                                }
+                                if (encontrado2 == false)
+                                {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("\tERROR CONTRASEÑA NO ENCONTRADO");
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                }
+                               
+                                encontrado = true;
+                            }
+                            else
+                            {
+                                cadena = Leer.ReadLine();
+                            }
+                        }
+                        if (encontrado == false)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("\tERROR USURARIO NO ENCONTRADO");
+                                Console.ForegroundColor = ConsoleColor.Black;
+                            }
+                            Leer.Close();
+
+ 
                         break;
                     case "b":
+                        Leer = File.OpenText("Clientes.txt");
+                        String Cadena, Usu, Cadena2, Con;
+                        bool Encontrado = false, Encontrado2 = false;
+                        String[] Campos = new String[7], Campos2 = new String[7];
+                        char[] Separador = { ',' };
+
+                        Console.WriteLine("\n");
+                        Console.Write("\tINGRESE USUARIO ");
+                        Usu = Console.ReadLine();
+                        Cadena = Console.ReadLine();
+
+                        while (Cadena != null && Encontrado == false)
+                        {
+                            campos = Cadena.Split(Separador);
+                            if (campos[0].Trim().Equals(Usu))
+                            {
+                                Console.WriteLine("\n");
+                                Console.Write("\tINGRESE CONTRASEÑA ");
+                                Con = Console.ReadLine();
+                                Cadena2 = Console.ReadLine();
+                                while (Cadena2 != null && Encontrado2 == false)
+                                {
+                                    campos2 = Cadena.Split(Separador);
+                                    if (campos[1].Trim().Equals(Con))
+                                    {
+                                        Console.WriteLine("\tINgreso cor");
+                                        Encontrado2 = true;
+
+                                    }
+                                    else
+                                    {
+                                        Cadena = Leer.ReadLine();
+                                    }
+                                }
+                                if (Encontrado2 == false)
+                                {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("\tERROR CONTRASEÑA NO ENCONTRADO1111");
+                                    Console.ForegroundColor = ConsoleColor.Black;
+                                }
+
+                                Encontrado = true;
+                            }
+                            else
+                            {
+                                Cadena = Leer.ReadLine();
+                            }
+                        }
+                        if (Encontrado == false)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("\tERROR USURARIO NO ENCONTRADO");
+                            Console.ForegroundColor = ConsoleColor.Black;
+                        }
+                        Leer.Close();
                         break;
                     case "c":
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\tHA SALIDO EXITOSAMENTE.");
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("\n");
                         break;
                     default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\n");
+                        Console.WriteLine("\t=========================================");
+                        Console.WriteLine("\t    ERROR = OPCION NO VALIDA");
+                        Console.WriteLine("\t=========================================");
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Black;
                         break;
                 }
                     
@@ -124,6 +247,7 @@ namespace ProyectoCatedra
                 switch (opcion2)
                 {
                     case "1":
+                        Leer.Close();
                         Escribir = new StreamWriter ("Clientes.txt",true);
                         string V2 = "1";
                         Console.Write("\tIngrese los nombres del cliente: ");
@@ -157,7 +281,7 @@ namespace ProyectoCatedra
                             Console.WriteLine("\t\nCLIENTE AGREGADO EXITOSAMENTE.");
                             Console.ForegroundColor = ConsoleColor.Black;
                             Console.WriteLine("\n");
-                            Escribir.WriteLine(Nombre+" "+Apellido+" "+Correo+" "+edad+" " +Pasaporte+" "+Usuario+" "+Contraseña);
+                            Escribir.WriteLine(Usuario + ","+ Contraseña + ","+Correo+","+edad+"," +Pasaporte+"," +Nombre+"," +Apellido);
                             Escribir.Close();
                         }
                         else
@@ -172,6 +296,7 @@ namespace ProyectoCatedra
 
                         break;
                     case "2":
+                        Leer.Close();
                         Escribir = new StreamWriter("usuario.txt", true);
                         string VU = "2";
                         Console.Write("\tIngrese los nombres del usuario: ");
@@ -205,7 +330,7 @@ namespace ProyectoCatedra
                             Console.WriteLine("\tUSUARIO AGREGADO EXITOSAMENTE.");
                             Console.ForegroundColor = ConsoleColor.Black;
                             Console.WriteLine("\n");
-                            Escribir.WriteLine(Nombre1 + " " + Apellido1 + " " + Correo1 + " " + edad1 + " " + Pasaporte1 + " " + Usuario1 + " " + Contraseña1);
+                            Escribir.WriteLine(Usuario1 + "," + Contraseña1 + "," + Correo1 + "," + edad1 + "," + Pasaporte1 + "," + Nombre1 + "," + Apellido1);
                             Escribir.Close();
                         }
                         else
@@ -274,7 +399,7 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\tVUELO AGREGADO EXITOSAMENTE.");
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Escribir.WriteLine(origen+" "+destino+" "+fecha_ida+" "+fecha_vuelta+" "+capacidad);
+                        Escribir.WriteLine(origen+"," +destino+"," +fecha_ida+"," +fecha_vuelta+"," +capacidad);
                         Escribir.Close();
 
                         break;
@@ -295,7 +420,7 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\tVUELO AGREGADO EXITOSAMENTE.");
                         Console.ForegroundColor = ConsoleColor.Black;
-                        Escribir.WriteLine(origen1 + " " + destino1 + " " + fecha_ida1 + " "+ capacidad1);
+                        Escribir.WriteLine(origen1 + "," + destino1 + "," + fecha_ida1 + "," + capacidad1);
                         Escribir.Close();
                         break;
                     case "3":
