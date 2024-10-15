@@ -27,7 +27,7 @@ namespace ProyectoCatedra
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\t=========================================");
-                Console.WriteLine("\t    MENÚ PRINCIPAL");
+                Console.WriteLine("\t    LOGIN");
                 Console.WriteLine("\t    A. INGRESAR COMO USUARIO");
                 Console.WriteLine("\t    B. INGRESAR COMO CLIENTE");
                 Console.WriteLine("\t    C. SALIR");
@@ -124,20 +124,14 @@ namespace ProyectoCatedra
                                     campos2 = Cadena.Split(Separador);
                                     if (campos[1].Trim().Equals(Con))
                                     {
-                                        Console.WriteLine("\tINgreso cor");
+                                        Cliente();
                                         Encontrado2 = true;
-
+                                        
                                     }
                                     else
                                     {
                                         Cadena = Leer.ReadLine();
                                     }
-                                }
-                                if (Encontrado2 == false)
-                                {
-                                    Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine("\tERROR CONTRASEÑA NO ENCONTRADO1111");
-                                    Console.ForegroundColor = ConsoleColor.Black;
                                 }
 
                                 Encontrado = true;
@@ -227,8 +221,13 @@ namespace ProyectoCatedra
                 }
             } while (opcion != "c");
         }
+
         static void R_Cliente_Usuario()
         {
+            Console.Clear();
+            Console.WriteLine("\n");
+            Console.Write("\tProyecto de catedra Programacion teoria");
+            Console.WriteLine("\n");
             string opcion2;
 
             do
@@ -363,8 +362,13 @@ namespace ProyectoCatedra
             } while (opcion2 != "3");
 
         }
+
         static void R_Vuelos()
         {
+            Console.Clear();
+            Console.WriteLine("\n");
+            Console.Write("\tProyecto de catedra Programacion teoria");
+            Console.WriteLine("\n");
             string vuelosOP;
             do
             {
@@ -445,5 +449,104 @@ namespace ProyectoCatedra
 
         }
 
+        static void Cliente()
+        {
+            Console.Clear();
+            Console.WriteLine("\n");
+            Console.Write("\tProyecto de catedra Programacion teoria");
+            Console.WriteLine("\n");
+            string opcion4 = "";
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("\t=========================================");
+                Console.WriteLine("\t    RESERVA DE VUELOS");
+                Console.WriteLine("\t    1. RESERVAR UN VUELO");
+                Console.WriteLine("\t    2. CANSELAR UN VUELO");
+                Console.WriteLine("\t    3. SALIR");
+                Console.WriteLine("\t=========================================");
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write("\tIngrese el numero correspondiente a la opción que quiere seleccionar ");
+                opcion4 = Console.ReadLine().ToLower();
+                switch (opcion4)
+                {
+                    case "1":
+                        Rvuelos();
+                        break;
+                    case "2":
+                        Cvuelos();
+                        break;
+                    case "3":
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\tHA SALIDO EXITOSAMENTE.");
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("\n");
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\n");
+                        Console.WriteLine("\t=========================================");
+                        Console.WriteLine("\t    ERROR = OPCION NO VALIDA");
+                        Console.WriteLine("\t=========================================");
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        break;
+                        
+                }
+            } while (opcion4 != "3");
+        }
+
+        static void Rvuelos()
+        {
+            Console.Clear();
+            Console.WriteLine("\n");
+            Console.Write("\tProyecto de catedra Programacion teoria");
+            Console.WriteLine("\n");
+            string opcion = "";
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("\t=========================================");
+                Console.WriteLine("\t    RESERVA DE VUELOS");
+                Console.WriteLine("\t    A. RESERVAR UN VUELO IDA Y VUELTA");
+                Console.WriteLine("\t    B. RESERVAR UN VUELO IDA");
+                Console.WriteLine("\t    C. SALIR");
+                Console.WriteLine("\t=========================================");
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write("\tIngrese la letra correspondiente a la opción que quiere seleccionar ");
+                opcion = Console.ReadLine().ToLower();
+                switch (opcion) 
+                {
+                    case "a":
+
+                        break;
+                    case "b":
+
+                        break;
+                    case "c":
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\tHA SALIDO EXITOSAMENTE.");
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("\n");
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\n");
+                        Console.WriteLine("\t=========================================");
+                        Console.WriteLine("\t    ERROR = OPCION NO VALIDA");
+                        Console.WriteLine("\t=========================================");
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        break;
+                }
+            } while (opcion != "3");
+        }
+
+        static void Cvuelos()
+        {
+
+        }
     }
 }
