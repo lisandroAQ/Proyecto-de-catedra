@@ -6,6 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 namespace ProyectoCatedra
 {
@@ -282,6 +283,13 @@ namespace ProyectoCatedra
                             Console.WriteLine("\n");
                             Escribir.WriteLine(Usuario + ","+ Contraseña + ","+Correo+","+edad+"," +Pasaporte+"," +Nombre+"," +Apellido);
                             Escribir.Close();
+                            Console.Write("\tDesea abrir el archivo de texto? (s/n): ");
+                            string Lop = Console.ReadLine();
+                            if (Lop == "S" || Lop == "s")
+                            {
+                                Process.Start("notepad.exe", "Clientes.txt");
+                            }
+
                         }
                         else
                         {
@@ -330,6 +338,12 @@ namespace ProyectoCatedra
                             Console.ForegroundColor = ConsoleColor.Black;
                             Console.WriteLine("\n");
                             Escribir.WriteLine(Usuario1 + "," + Contraseña1 + "," + Correo1 + "," + edad1 + "," + Pasaporte1 + "," + Nombre1 + "," + Apellido1);
+                            Console.Write("\tDesea abrir el archivo de texto? (s/n): ");
+                            string Lop = Console.ReadLine();
+                            if (Lop == "S" || Lop == "s")
+                            {
+                                Process.Start("notepad.exe", "usuario.txt");
+                            }
                             Escribir.Close();
                         }
                         else
@@ -405,6 +419,11 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Black;
                         Escribir.WriteLine(origen+"," +destino+"," +fecha_ida+"," +fecha_vuelta+"," +capacidad);
                         Escribir.Close();
+                        string Lop = Console.ReadLine();
+                        if (Lop == "S" || Lop == "s")
+                        {
+                            Process.Start("notepad.exe", "vuelo_ida_vuelta.txt");
+                        }
 
                         break;
                     case "2":
@@ -426,6 +445,11 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Black;
                         Escribir.WriteLine(origen1 + "," + destino1 + "," + fecha_ida1 + "," + capacidad1);
                         Escribir.Close();
+                        string Lopo = Console.ReadLine();
+                        if (Lopo == "S" || Lopo == "s")
+                        {
+                            Process.Start("notepad.exe", "vuelos_ida.txt");
+                        }
                         break;
                     case "3":
                         Console.WriteLine("\n");
