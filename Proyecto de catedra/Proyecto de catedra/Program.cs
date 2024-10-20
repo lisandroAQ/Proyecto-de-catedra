@@ -18,14 +18,14 @@ namespace ProyectoCatedra
         {
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.White;
-            Console.Clear();
-            Console.Title = "Proyecto de Catedra";
-            Console.WriteLine("\n");
-            Console.Write("\tProyecto de catedra Programacion teoria");
-            Console.WriteLine("\n");
             string a;
             do
             {
+                Console.Clear();
+                Console.Title = "Proyecto de Catedra";
+                Console.WriteLine("\n");
+                Console.Write("\tProyecto de catedra Programacion teoria");
+                Console.WriteLine("\n");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\t=========================================");
                 Console.WriteLine("\t    LOGIN");
@@ -176,13 +176,14 @@ namespace ProyectoCatedra
 
         static void Usuario()
         {
-            Console.Clear();
-            Console.WriteLine("\n");
-            Console.Write("\tProyecto de catedra Programacion teoria");
-            Console.WriteLine("\n");
+            
             string opcion;
             do
             {
+                Console.Clear();
+                Console.WriteLine("\n");
+                Console.Write("\tProyecto de catedra Programacion teoria");
+                Console.WriteLine("\n");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\t=========================================");
                 Console.WriteLine("\t    MENÚ PRINCIPAL");
@@ -225,20 +226,19 @@ namespace ProyectoCatedra
 
         static void R_Cliente_Usuario()
         {
-            Console.Clear();
-            Console.WriteLine("\n");
-            Console.Write("\tProyecto de catedra Programacion teoria");
-            Console.WriteLine("\n");
             string opcion2;
-
             do
             {
+                Console.Clear();
+                Console.WriteLine("\n");
+                Console.Write("\tProyecto de catedra Programacion teoria");
+                Console.WriteLine("\n");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\t=========================================");
                 Console.WriteLine("\t    MENÚ SECUNDARIO");
-                Console.WriteLine("\t    1. REGISTRAR UN CLIENTE");
-                Console.WriteLine("\t    2. REGISTRAR UN USUARIO");
-                Console.WriteLine("\t    3. SALIR");
+                Console.WriteLine("\t    A. REGISTRAR UN CLIENTE");
+                Console.WriteLine("\t    B. REGISTRAR UN USUARIO");
+                Console.WriteLine("\t    C. SALIR");
                 Console.WriteLine("\t=========================================");
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.Write("\tIngrese la letra correspondiente a la opción que quiere seleccionar ");
@@ -246,7 +246,7 @@ namespace ProyectoCatedra
                 Console.WriteLine("\n");
                 switch (opcion2)
                 {
-                    case "1":
+                    case "a":
                         Leer.Close();
                         Escribir = new StreamWriter ("Clientes.txt",true);
                         string V2 = "1";
@@ -302,7 +302,7 @@ namespace ProyectoCatedra
                         }
 
                         break;
-                    case "2":
+                    case "b":
                         Leer.Close();
                         Escribir = new StreamWriter("usuario.txt", true);
                         string VU = "2";
@@ -356,7 +356,7 @@ namespace ProyectoCatedra
                             Console.ForegroundColor = ConsoleColor.Black;
                         }
                         break;
-                    case "3":
+                    case "c":
                         Console.WriteLine("\n");
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\tHA SALIDO EXITOSAMENTE.");
@@ -373,25 +373,26 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Black;
                         break;
                 }
-            } while (opcion2 != "3");
+            } while (opcion2 != "c");
 
         }
 
         static void R_Vuelos()
         {
-            Console.Clear();
-            Console.WriteLine("\n");
-            Console.Write("\tProyecto de catedra Programacion teoria");
-            Console.WriteLine("\n");
+            
             string vuelosOP;
             do
             {
+                Console.Clear();
+                Console.WriteLine("\n");
+                Console.Write("\tProyecto de catedra Programacion teoria");
+                Console.WriteLine("\n");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\t=========================================");
                 Console.WriteLine("\t    MENÚ SECUNDARIO");
-                Console.WriteLine("\t    1. REGISTRAR UN VUELO DE IDA Y VUELTA");
-                Console.WriteLine("\t    2. REGISTRAR UN VUELO SOLO DE IDA");
-                Console.WriteLine("\t    3. SALIR");
+                Console.WriteLine("\t    A. REGISTRAR UN VUELO DE IDA Y VUELTA");
+                Console.WriteLine("\t    B. REGISTRAR UN VUELO SOLO DE IDA");
+                Console.WriteLine("\t    C. SALIR");
                 Console.WriteLine("\t=========================================");
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.Write("\tIngrese la letra correspondiente a la opción que quiere seleccionar ");
@@ -399,7 +400,7 @@ namespace ProyectoCatedra
                 Console.WriteLine("\n");
                 switch (vuelosOP)
                 {
-                    case "1":
+                    case "a":
                         Escribir = new StreamWriter("vuelo_ida_vuelta.txt", true);
                         string V2 = "1";
                         string origen, destino, fecha_ida, fecha_vuelta, capacidad;
@@ -424,9 +425,8 @@ namespace ProyectoCatedra
                         {
                             Process.Start("notepad.exe", "vuelo_ida_vuelta.txt");
                         }
-
                         break;
-                    case "2":
+                    case "b":
                         Escribir = new StreamWriter("vuelos_ida.txt", true);
                         string VU = "2";
                         string origen1, destino1, fecha_ida1, capacidad1;
@@ -451,7 +451,7 @@ namespace ProyectoCatedra
                             Process.Start("notepad.exe", "vuelos_ida.txt");
                         }
                         break;
-                    case "3":
+                    case "c":
                         Console.WriteLine("\n");
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\tHA SALIDO EXITOSAMENTE.");
@@ -469,38 +469,39 @@ namespace ProyectoCatedra
                         break;
                 }
 
-            } while (vuelosOP != "3");
+            } while (vuelosOP != "c");
 
         }
 
         static void Cliente()
         {
-            Console.Clear();
-            Console.WriteLine("\n");
-            Console.Write("\tProyecto de catedra Programacion teoria");
-            Console.WriteLine("\n");
+            
             string opcion4 = "";
             do
             {
+                Console.Clear();
+                Console.WriteLine("\n");
+                Console.Write("\tProyecto de catedra Programacion teoria");
+                Console.WriteLine("\n");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\t=========================================");
                 Console.WriteLine("\t    RESERVA DE VUELOS");
-                Console.WriteLine("\t    1. RESERVAR UN VUELO");
-                Console.WriteLine("\t    2. CANSELAR UN VUELO");
-                Console.WriteLine("\t    3. SALIR");
+                Console.WriteLine("\t    A. RESERVAR UN VUELO");
+                Console.WriteLine("\t    B. CANSELAR UN VUELO");
+                Console.WriteLine("\t    C. SALIR");
                 Console.WriteLine("\t=========================================");
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.Write("\tIngrese el numero correspondiente a la opción que quiere seleccionar ");
                 opcion4 = Console.ReadLine().ToLower();
                 switch (opcion4)
                 {
-                    case "1":
+                    case "a":
                         Rvuelos();
                         break;
-                    case "2":
+                    case "b":
                         Cvuelos();
                         break;
-                    case "3":
+                    case "c":
                         Console.WriteLine("\n");
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("\tHA SALIDO EXITOSAMENTE.");
@@ -518,23 +519,24 @@ namespace ProyectoCatedra
                         break;
                         
                 }
-            } while (opcion4 != "3");
+            } while (opcion4 != "c");
         }
 
         static void Rvuelos()
         {
-            Console.Clear();
-            Console.WriteLine("\n");
-            Console.Write("\tProyecto de catedra Programacion teoria");
-            Console.WriteLine("\n");
+            
             string opcion = "";
             do
             {
+                Console.Clear();
+                Console.WriteLine("\n");
+                Console.Write("\tProyecto de catedra Programacion teoria");
+                Console.WriteLine("\n");
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("\t=========================================");
                 Console.WriteLine("\t    RESERVA DE VUELOS");
-                Console.WriteLine("\t    A. RESERVAR UN VUELO IDA Y VUELTA");
-                Console.WriteLine("\t    B. RESERVAR UN VUELO IDA");
+                Console.WriteLine("\t    A. VER VUELO IDA Y VUELTA");
+                Console.WriteLine("\t    B. VER UN VUELO SOLO DE IDA");
                 Console.WriteLine("\t    C. SALIR");
                 Console.WriteLine("\t=========================================");
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -543,10 +545,22 @@ namespace ProyectoCatedra
                 switch (opcion) 
                 {
                     case "a":
-
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\tARCHIBO ABIERTO CORRECTAMENTE.");
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("\n");
+                        Process.Start("notepad.exe", "vuelo_ida_vuelta.txt");
+                        Console.ReadKey();
                         break;
                     case "b":
-
+                        Console.WriteLine("\n");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\tARCHIBO ABIERTO CORRECTAMENTE.");
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("\n");
+                        Process.Start("notepad.exe", "vuelos_ida.txt");
+                        Console.ReadKey();
                         break;
                     case "c":
                         Console.WriteLine("\n");
@@ -565,12 +579,18 @@ namespace ProyectoCatedra
                         Console.ForegroundColor = ConsoleColor.Black;
                         break;
                 }
-            } while (opcion != "3");
+            } while (opcion != "c");
         }
 
         static void Cvuelos()
         {
-
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\n");
+            Console.WriteLine("\t=========================================");
+            Console.WriteLine("\t    ERROR = FUNCION PENDIENTE");
+            Console.WriteLine("\t=========================================");
+            Console.WriteLine("\n");
+            Console.ForegroundColor = ConsoleColor.Black;
         }
     }
 }
